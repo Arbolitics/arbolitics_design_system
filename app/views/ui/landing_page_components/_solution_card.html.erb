@@ -1,0 +1,20 @@
+<%# locals: (icon_paths:, title:, description: nil, url:) %>
+<div data-slot="card" class="flex flex-col gap-6 rounded-xl border py-6 shadow-sm bg-[#DBE1C1] text-primary card-hover">
+  <div data-slot="card-content" class="px-6 flex flex-col gap-4">
+
+    <div class="flex justify-between items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary w-8 h-8">
+        <%= icon_paths.html_safe %>
+      </svg>
+      <a aria-label="<%= title %>" href="<%= url %>" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 size-9 rounded-full hover:no-underline transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#DBE1C1] size-7"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+      </a>
+    </div>
+
+    <div class="text-xl font-semibold"><%= title %></div>
+    <% if description.present? %>
+      <div><%= description %></div>
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<%# locals: () %>
+<section class="relative min-h-[560px] flex items-center overflow-hidden">
+
+  <%# Background image + overlay %>
+  <div class="absolute inset-0 z-0">
+    <img alt="leaf hero" class="h-full w-full object-cover" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;" src="/leaf.png" />
+    <div class="hero-overlay"></div>
+  </div>
+
+  <%# Content %>
+  <div class="container mx-auto px-6 z-10">
+    <div class="flex flex-col justify-center items-center text-center space-y-8">
+      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-5xl">Farm data experts</h1>
+      <p class="text-lg text-muted-foreground md:text-xl max-w-xl">
+        Our software tools are used by farmers, supply chain managers, banks and investors to increase efficiency of their decisions.
+        Explore our solutions
+      </p>
+      <div class="flex flex-col gap-4 sm:flex-row">
+        <a href="/#solutions" class="inline-flex items-center justify-center whitespace-nowrap font-medium bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-12 rounded-md px-6 gap-2 text-base hover:no-underline transition-colors">
+          Explore our solutions
+          <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>

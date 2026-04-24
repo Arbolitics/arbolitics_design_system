@@ -1,253 +1,77 @@
-<%# Landing page home — Lookbook preview
-    Layout: landings/home/marketing (provides nav, footer, shared marketing CSS)
-    Content: hero + solutions + insights + contact sections %>
+<%# Landing page home — assembled from landing_page_components partials %>
 
-<%# ===== Hero ===== %>
-<section class="relative flex items-center justify-center overflow-hidden text-white" style="min-height: 560px; background: linear-gradient(135deg, #023020 0%, #045e40 60%, #067a52 100%);">
-  <div class="absolute inset-0 opacity-20" style="background: url('/assets/leaf.png') center center / cover no-repeat;"></div>
-  <div class="relative z-10 text-center px-6 max-w-3xl mx-auto py-20">
-    <h1 class="text-5xl font-bold leading-tight mb-5">Farm data experts</h1>
-    <p class="text-lg opacity-90 leading-relaxed mb-10 max-w-xl mx-auto">
-      Precision agriculture intelligence for farmers, banks, and investors. Plot-level analytics that turn field data into confident decisions.
-    </p>
-    <a href="#solutions" class="inline-flex items-center gap-2 bg-white text-[#045e40] font-semibold px-7 py-3.5 rounded-lg hover:bg-[#DBE1C1] transition-colors text-base">
-      Explore our solutions <i class="bi bi-arrow-down"></i>
-    </a>
-  </div>
-</section>
+<%= render "ui/landing_page_components/navbar" %>
 
-<%# ===== Farming solutions ===== %>
-<section id="solutions" class="py-20 bg-white">
-  <div class="max-w-[1200px] mx-auto px-6">
-    <div class="grid gap-12 items-center lg:grid-cols-[1fr_55%]">
+<main class="flex-1 relative">
 
-      <%# Left — text %>
-      <div>
-        <p class="text-xs font-bold uppercase tracking-widest text-[#045e40] mb-3">For farmers</p>
-        <h2 class="text-3xl font-bold text-gray-900 mb-4 leading-snug">Smarter decisions for every plot</h2>
-        <p class="text-gray-500 leading-relaxed mb-8">
-          Arbolitics puts satellite intelligence, irrigation precision, and yield analytics directly in the hands of growers — so every season starts with better data.
-        </p>
-        <a href="#" class="inline-flex items-center gap-2 bg-[#045e40] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#034b35] transition-colors">
-          Learn more <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
+  <%= render "ui/landing_page_components/hero" %>
 
-      <%# Right — 3 solution cards %>
-      <div class="grid gap-4 sm:grid-cols-1">
+  <%# Arbolitics Farming solutions %>
+  <%
+    farming_cards = [
+      {
+        icon_paths: '<path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path>',
+        title: "Irrigation Planner",
+        description: "Smart irrigation management to optimize water use, improve efficiency, and maximize agricultural yield.",
+        url: "/farmer/irrigation-planner"
+      },
+      {
+        icon_paths: '<path d="M13 7 9 3 5 7l4 4"></path><path d="m17 11 4 4-4 4-4-4"></path><path d="m8 12 4 4 6-6-4-4Z"></path><path d="m16 8 3-3"></path><path d="M9 21a6 6 0 0 0-6-6"></path>',
+        title: "Detection of productivity problems (satellite and climate processing automation)",
+        description: "Climate history and forecasts, satellite indicators, and crop alerts to anticipate risks and make decisions.",
+        url: "/farmer/satellite"
+      },
+      {
+        icon_paths: '<path d="M7 20h10"></path><path d="M10 20c5.5-2.5.8-6.4 3-10"></path><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"></path><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"></path>',
+        title: "Yield estimations",
+        description: "Estimates 12 weeks in advance, with over 90% accuracy powered by AI.",
+        url: "/farmer/yield-estimation"
+      }
+    ]
+  %>
+  <%= render "ui/landing_page_components/solutions_section",
+        title: "Arbolitics Farming",
+        subtitle_texts: [
+          "Farm management is at the heart of our expertise. We understand how different the realities of different crops and farms are.",
+          "Our solutions combine latest agronomic science and data modelling to provide farmers with crop-specific tools (including fruits and vegetables):"
+        ],
+        cards: farming_cards,
+        reversed: false %>
 
-        <div class="flex items-start gap-4 rounded-xl p-5 bg-[#DBE1C1]">
-          <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-[#045e40] flex items-center justify-center text-white text-xl">
-            <i class="bi bi-droplet-half"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-gray-900 mb-1">Irrigation planner</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Plot-level weekly irrigation schedules based on ETo, crop coefficients, and local forecast data.</p>
-          </div>
-        </div>
+  <%# Arbolitics Finance solutions %>
+  <%
+    finance_cards = [
+      {
+        icon_paths: '<path d="M12 16v5"></path><path d="M16 14v7"></path><path d="M20 10v11"></path><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"></path><path d="M4 18v3"></path><path d="M8 14v7"></path>',
+        title: "Credit risk scoring",
+        url: "/finance/score"
+      },
+      {
+        icon_paths: '<path d="M7 20h10"></path><path d="M10 20c5.5-2.5.8-6.4 3-10"></path><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"></path><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"></path>',
+        title: "Yield estimations",
+        url: "/farmer/yield-estimation"
+      },
+      {
+        icon_paths: '<path d="M21 6H3"></path><path d="M10 12H3"></path><path d="M10 18H3"></path><circle cx="17" cy="15" r="3"></circle><path d="m21 19-1.9-1.9"></path>',
+        title: "Portfolio risk analytics",
+        url: "/finance/score"
+      }
+    ]
+  %>
+  <%= render "ui/landing_page_components/solutions_section",
+        title: "Arbolitics Finance",
+        subtitle_texts: [
+          "Banks, investors, supply chain managers, traders all need access to agricultural intelligence at their fingertips. Our tools combine large data sets and plot-specific data modelling to deliver:"
+        ],
+        cards: finance_cards,
+        reversed: true %>
 
-        <div class="flex items-start gap-4 rounded-xl p-5 bg-[#DBE1C1]">
-          <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-[#045e40] flex items-center justify-center text-white text-xl">
-            <i class="bi bi-broadcast"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-gray-900 mb-1">Satellite detection &amp; alerts</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">NDVI anomaly detection from Planet Scope imagery. Spot crop stress early — before it becomes a loss.</p>
-          </div>
-        </div>
+  <%= render "ui/landing_page_components/custom_data_section" %>
 
-        <div class="flex items-start gap-4 rounded-xl p-5 bg-[#DBE1C1]">
-          <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-[#045e40] flex items-center justify-center text-white text-xl">
-            <i class="bi bi-graph-up-arrow"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-gray-900 mb-1">Yield estimations</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Season-ahead yield forecasts per parcel, derived from multi-year climate and satellite baselines.</p>
-          </div>
-        </div>
+  <%= render "ui/landing_page_components/insights_section" %>
 
-      </div>
-    </div>
-  </div>
-</section>
+  <%= render "ui/landing_page_components/contact_section" %>
 
-<%# ===== Finance solutions (reversed) ===== %>
-<section class="py-20 bg-[#f8f9f4]">
-  <div class="max-w-[1200px] mx-auto px-6">
-    <div class="grid gap-12 items-center lg:grid-cols-[55%_1fr]">
+</main>
 
-      <%# Left — 3 solution cards %>
-      <div class="grid gap-4">
-
-        <div class="flex items-start gap-4 rounded-xl p-5 bg-white shadow-sm border border-gray-100">
-          <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-[#045e40] flex items-center justify-center text-white text-xl">
-            <i class="bi bi-shield-check"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-gray-900 mb-1">Credit risk scoring</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Agronomical credit scores that combine satellite data, climate risk, and multi-year yield history.</p>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-4 rounded-xl p-5 bg-white shadow-sm border border-gray-100">
-          <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-[#045e40] flex items-center justify-center text-white text-xl">
-            <i class="bi bi-bar-chart-line"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-gray-900 mb-1">Yield estimations</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Plot-level yield forecasts to benchmark collateral value and set realistic repayment timelines.</p>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-4 rounded-xl p-5 bg-white shadow-sm border border-gray-100">
-          <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-[#045e40] flex items-center justify-center text-white text-xl">
-            <i class="bi bi-pie-chart"></i>
-          </div>
-          <div>
-            <h3 class="font-bold text-gray-900 mb-1">Portfolio risk analytics</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">Aggregate exposure view across all borrower plots — regional climate clusters and concentration risk at a glance.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <%# Right — text %>
-      <div>
-        <p class="text-xs font-bold uppercase tracking-widest text-[#045e40] mb-3">For institutions</p>
-        <h2 class="text-3xl font-bold text-gray-900 mb-4 leading-snug">Agricultural risk, made measurable</h2>
-        <p class="text-gray-500 leading-relaxed mb-8">
-          Banks, investors, and insurers use Arbolitics to quantify agricultural exposure with the same rigour applied to any other asset class.
-        </p>
-        <a href="#" class="inline-flex items-center gap-2 bg-[#045e40] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#034b35] transition-colors">
-          Learn more <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<%# ===== Custom data section ===== %>
-<section class="py-20 bg-white text-center">
-  <div class="max-w-[1200px] mx-auto px-6">
-    <p class="text-xs font-bold uppercase tracking-widest text-[#045e40] mb-3">Tailored solutions</p>
-    <h2 class="text-3xl font-bold text-gray-900 mb-4">Custom data integrations</h2>
-    <p class="text-gray-500 leading-relaxed max-w-2xl mx-auto mb-10">
-      Need a bespoke agronomical dataset or a white-label analytics feed? Our data engineering team designs and delivers custom pipelines for satellite, climate, and field-sensor data at any scale.
-    </p>
-    <a href="#contact" class="inline-flex items-center gap-2 border-2 border-[#045e40] text-[#045e40] font-semibold px-7 py-3 rounded-lg hover:bg-[#045e40] hover:text-white transition-colors">
-      Talk to us <i class="bi bi-arrow-right"></i>
-    </a>
-  </div>
-</section>
-
-<%# ===== Insights section ===== %>
-<section class="py-20 bg-stone-100">
-  <div class="max-w-[1200px] mx-auto px-6">
-    <h2 class="text-3xl font-bold text-gray-900 text-center mb-2">Latest insights</h2>
-    <p class="text-gray-500 text-center mb-12 max-w-xl mx-auto">Research, case studies, and data perspectives from the Arbolitics team.</p>
-
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-      <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-        <div class="h-44 bg-[#045e40] flex items-center justify-center text-white text-4xl">
-          <i class="bi bi-satellite2"></i>
-        </div>
-        <div class="p-5">
-          <p class="text-xs font-semibold uppercase tracking-widest text-[#045e40] mb-2">Remote sensing</p>
-          <h3 class="font-bold text-gray-900 mb-2 leading-snug">How satellite NDVI tracks avocado yield before harvest</h3>
-          <p class="text-sm text-gray-500 leading-relaxed mb-4">A six-season study across 340 plots in Mexico correlating spectral indices with actual yield outcomes.</p>
-          <a href="#" class="text-[#045e40] font-semibold text-sm inline-flex items-center gap-1 hover:underline">
-            Read more <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-      </article>
-
-      <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-        <div class="h-44 bg-[#6b4c2a] flex items-center justify-center text-white text-4xl">
-          <i class="bi bi-cup-hot"></i>
-        </div>
-        <div class="p-5">
-          <p class="text-xs font-semibold uppercase tracking-widest text-[#045e40] mb-2">Crop finance</p>
-          <h3 class="font-bold text-gray-900 mb-2 leading-snug">Cocoa credit risk: the case for plot-level scoring</h3>
-          <p class="text-sm text-gray-500 leading-relaxed mb-4">Why aggregated country-level indices miss the microclimate variance that drives smallholder default rates.</p>
-          <a href="#" class="text-[#045e40] font-semibold text-sm inline-flex items-center gap-1 hover:underline">
-            Read more <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-      </article>
-
-      <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-        <div class="h-44 bg-[#3a6b2a] flex items-center justify-center text-white text-4xl">
-          <i class="bi bi-flower1"></i>
-        </div>
-        <div class="p-5">
-          <p class="text-xs font-semibold uppercase tracking-widest text-[#045e40] mb-2">Precision agriculture</p>
-          <h3 class="font-bold text-gray-900 mb-2 leading-snug">Irrigation efficiency gains from ETo-based scheduling</h3>
-          <p class="text-sm text-gray-500 leading-relaxed mb-4">Farmers using algorithm-driven schedules applied 18% less water while maintaining equivalent yields across three crop types.</p>
-          <a href="#" class="text-[#045e40] font-semibold text-sm inline-flex items-center gap-1 hover:underline">
-            Read more <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="text-center mt-10">
-      <a href="#" class="text-[#045e40] font-semibold inline-flex items-center gap-2 hover:underline">
-        View all insights <i class="bi bi-arrow-right"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-<%# ===== Contact section ===== %>
-<section id="contact" class="py-20 bg-white">
-  <div class="max-w-[1200px] mx-auto px-6">
-    <div class="grid gap-0 overflow-hidden rounded-2xl shadow-lg lg:grid-cols-2">
-
-      <%# Left — info panel %>
-      <div class="bg-[#045e40] text-white p-10 lg:p-12 flex flex-col justify-center">
-        <h2 class="text-3xl font-bold mb-4">Get in touch</h2>
-        <p class="opacity-90 leading-relaxed mb-8">
-          Whether you're a grower looking for precision tools or an institution exploring agricultural risk data — we'd love to hear from you.
-        </p>
-        <div class="flex items-center gap-3 mb-4">
-          <i class="bi bi-geo-alt-fill text-xl opacity-80"></i>
-          <span class="text-sm opacity-90">Berlin, Germany</span>
-        </div>
-        <div class="flex items-center gap-3">
-          <i class="bi bi-envelope-fill text-xl opacity-80"></i>
-          <span class="text-sm opacity-90">contact@arbolitics.com</span>
-        </div>
-      </div>
-
-      <%# Right — contact form (inlined to avoid missing contact_create_path in preview) %>
-      <div class="bg-white p-10 lg:p-12">
-        <form class="flex flex-col gap-3">
-          <div class="grid grid-cols-2 gap-3">
-            <input type="text" placeholder="First name" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#045e40]">
-            <input type="text" placeholder="Last name" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#045e40]">
-          </div>
-          <input type="email" placeholder="Email address" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#045e40]">
-          <input type="text" placeholder="Company (optional)" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#045e40]">
-          <select class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-[#045e40]">
-            <option value="" disabled selected>I am a…</option>
-            <option>Farmer</option>
-            <option>Bank / Agricultural lender</option>
-            <option>Investor</option>
-            <option>Supply chain partner</option>
-            <option>Insurance provider</option>
-            <option>Consultant</option>
-            <option>Other</option>
-          </select>
-          <textarea rows="4" placeholder="Your message" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#045e40]"></textarea>
-          <button type="button" class="w-full bg-[#045e40] text-white font-semibold py-3 rounded-lg hover:bg-[#034b35] transition-colors flex items-center justify-center gap-2">
-            Send message <i class="bi bi-send"></i>
-          </button>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</section>
+<%= render "ui/landing_page_components/footer" %>

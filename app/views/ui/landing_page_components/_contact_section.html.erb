@@ -1,0 +1,71 @@
+<%# locals: () %>
+<section id="contact" class="section-padding">
+  <div class="container">
+    <div class="mx-auto max-w-5xl bg-background rounded-2xl shadow-lg overflow-hidden">
+      <div class="grid md:grid-cols-2">
+
+        <%# Left — green info panel %>
+        <div class="px-6 py-12 bg-primary sm:px-12 text-primary-foreground flex flex-col justify-center">
+          <div class="max-w-md">
+            <h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Contact us</h2>
+            <p class="text-lg opacity-90 mb-8">Ready to transform your farmland risk analysis approach? Contact us today and try the demo!</p>
+
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="hidden sm:block rounded-full bg-primary-foreground/10 p-2 mt-1">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <h3 class="font-medium">Our Location</h3>
+                  <p class="opacity-90">Gerichtstraße 23, 13347, Berlin, Germany</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4 flex-col sm:flex-row">
+                <div class="hidden sm:block rounded-full bg-primary-foreground/10 p-2 mt-1">
+                  <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                </div>
+                <div>
+                  <h3 class="font-medium">Email Us</h3>
+                  <p class="opacity-90">contact@arbolitics.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <%# Right — contact form %>
+        <div class="px-6 py-12 sm:px-12">
+          <form class="space-y-6">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="space-y-2">
+                <label for="first-name" class="text-sm font-medium">First name</label>
+                <input id="first-name" type="text" class="w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" placeholder="John" name="firstName">
+              </div>
+              <div class="space-y-2">
+                <label for="last-name" class="text-sm font-medium">Last name</label>
+                <input id="last-name" type="text" class="w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" placeholder="Doe" name="lastName">
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label for="email" class="text-sm font-medium">Email</label>
+              <input id="email" type="email" class="w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" placeholder="john.doe@example.com" name="email">
+            </div>
+            <div class="space-y-2">
+              <label for="company" class="text-sm font-medium">Company</label>
+              <input id="company" type="text" class="w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" placeholder="My company" name="company">
+            </div>
+            <div class="space-y-2">
+              <label for="message" class="text-sm font-medium">Message</label>
+              <textarea id="message" name="message" class="w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" placeholder="Tell us about your project..." rows="4"></textarea>
+            </div>
+            <button type="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-12 rounded-md px-6 w-full cursor-pointer">
+              Submit
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

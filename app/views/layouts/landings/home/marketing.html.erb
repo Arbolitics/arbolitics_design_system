@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html class="scroll-smooth">
   <head>
-    <title>Lookbook Preview</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Arbolitics - Farmland risk analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "fonts", "data-turbo-track": "reload" %>
@@ -10,8 +10,9 @@
     <%= javascript_importmap_tags %>
     <style>html, body { font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif !important; }</style>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="flex min-h-screen flex-col relative">
+      <%= yield %>
+    </div>
   </body>
 </html>

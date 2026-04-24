@@ -1,0 +1,57 @@
+<%# locals: () %>
+<header class="fixed top-0 z-50 w-full transition-all duration-300 bg-transparent">
+  <div class="container flex h-20 items-center justify-between">
+
+    <%# Logo %>
+    <div class="flex items-center gap-6">
+      <a class="flex items-center gap-2 hover:no-underline" href="/">
+        <%= image_tag "arbolitics_logo.svg", alt: "arbolitics logo", width: 164, height: 32, class: "w-30" %>
+      </a>
+    </div>
+
+    <div class="flex items-center gap-4">
+
+      <%# Desktop navigation %>
+      <nav class="hidden lg:flex gap-8">
+        <div class="relative">
+          <button class="py-2 text-base font-medium opacity-90 hover:text-primary transition-colors cursor-pointer flex items-center duration-200">
+            Insights
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down ml-1 h-4 w-4 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+        </div>
+        <div class="relative">
+          <button class="py-2 text-base font-medium opacity-90 hover:text-primary transition-colors cursor-pointer flex items-center duration-200">
+            Farmer
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down ml-1 h-4 w-4 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+        </div>
+        <div class="relative">
+          <button class="py-2 text-base font-medium opacity-90 hover:text-primary transition-colors cursor-pointer flex items-center duration-200">
+            Finance
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down ml-1 h-4 w-4 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+          </button>
+        </div>
+      </nav>
+
+      <%# Contact CTA %>
+      <a href="/#contact" class="hidden lg:flex ml-4 items-center justify-center gap-2 whitespace-nowrap text-sm font-medium bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-12 rounded-md px-6 hover:no-underline transition-colors">
+        Contact us
+      </a>
+
+      <%# Language selector %>
+      <div class="hidden lg:block">
+        <button class="inline-flex items-center gap-2 whitespace-nowrap text-sm font-medium bg-transparent text-secondary-foreground h-12 rounded-md px-6 justify-between shadow-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-4 w-4 opacity-50"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 opacity-50 hidden sm:block"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+      </div>
+
+      <%# Mobile hamburger %>
+      <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium hover:bg-accent hover:text-accent-foreground size-9 lg:hidden">
+        <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+        <span class="sr-only">Toggle menu</span>
+      </button>
+
+    </div>
+  </div>
+</header>

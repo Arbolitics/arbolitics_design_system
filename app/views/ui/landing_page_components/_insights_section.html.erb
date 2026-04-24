@@ -1,0 +1,50 @@
+<%# locals: () %>
+<%
+  insights = [
+    {
+      image_src:   "/satellite.jpg",
+      image_alt:   "satellite image",
+      title:       "Unlocking Better Agricultural Finance",
+      description: "See how satellite and climate data empower microfinance banks to reduce defaults, cut costs, and expand farmer credit.",
+      url:         "/insights/satellite-climate-data-microfinance"
+    },
+    {
+      image_src:   "/cocoa.jpg",
+      image_alt:   "cocoa image",
+      title:       "Behind the Cocoa Price Surge",
+      description: "Explore the factors driving record cocoa prices and how data-driven insights can strengthen supply chains.",
+      url:         "/insights/behind-cocoa-price-surge"
+    },
+    {
+      image_src:   "/agriculture.jpg",
+      image_alt:   "agriculture image",
+      title:       "Smarter Insurance in Agriculture",
+      description: "Discover how real-time farm data helps insurers design fairer products while protecting farmers from rising risks.",
+      url:         "/insights/smarter-insurance-in-agriculture"
+    }
+  ]
+%>
+<section id="software" class="section-padding bg-stone-100">
+  <div class="container">
+
+    <div class="mx-auto max-w-3xl text-center mb-16">
+      <h2 class="text-3xl font-bold sm:text-4xl mb-4">Insights</h2>
+      <p class="text-lg">Explore how we can support your work</p>
+    </div>
+
+    <%# Static 3-column grid (replaces the JS carousel) %>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
+      <% insights.each do |insight| %>
+        <%= render "ui/landing_page_components/insight_card", **insight %>
+      <% end %>
+    </div>
+
+    <%# Dot indicators (decorative) %>
+    <div class="mt-4 flex items-center justify-center gap-2">
+      <button class="h-3.5 w-3.5 rounded-full border-2 bg-primary"></button>
+      <button class="h-3.5 w-3.5 rounded-full border-2"></button>
+      <button class="h-3.5 w-3.5 rounded-full border-2"></button>
+    </div>
+
+  </div>
+</section>
