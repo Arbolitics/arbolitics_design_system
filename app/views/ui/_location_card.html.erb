@@ -1,0 +1,119 @@
+<%# locals: (location:, show_actions: false) %>
+<% recent_notes = location.notes.order(created_at: :desc).limit(3) %>
+<% recent_alerts = location.alerts.order(created_at: :desc).limit(3) %>
+<% latest_scoring = location.scoring_data.where(is_active: true).order(datetime: :desc).first %>
+<% latest_gcm = location.gcm_data.where(is_active: true).order(datetime: :desc).first %>
+<% current_stage = location.stages.order(created_at: :desc).first %>
+
+<%= render "ui/card" do %>
+  <%# Header row %>
+  <div class="flex flex-row justify-between items-end gap-2">
+    <div class="flex flex-row gap-2 min-w-0 items-end">
+      <%= render "ui/field", label: t("locations_dashboard.location_name", default: "Location name"), value: location.name %>
+      <%= render "ui/icon_button", icon: lucide_icon("arrow-up-right", class: "h-4 w-4"), variant: "outline", size: "sm", shape: "square", href: maps_path(location_id: location.id) %>
+    </div>
+    <div class="flex items-end gap-2">
+      <% if latest_scoring %>
+        <%= render "ui/badge", text: "Score: #{number_with_precision(latest_scoring.data['score'], precision: 2)}", variant: "score", size: "lg" %>
+      <% end %>
+      <%= render "ui/dropdown_menu", side: "bottom", align: "end" do %>
+        <button data-type="icon-button" variant="tinted" size="md" shape="round"
+                type="button" data-dropdown-trigger aria-haspopup="menu" aria-expanded="false">
+          <%= lucide_icon("ellipsis-vertical", class: "h-4 w-4") %>
+        </button>
+
+        <div data-slot="dropdown-menu-content" role="menu" aria-orientation="vertical" data-state="closed">
+          <div role="menuitem" data-slot="dropdown-menu-item" data-variant="default">
+            <%= lucide_icon("pen") %><span>Edit location</span>
+          </div>
+          <div role="menuitem" data-slot="dropdown-menu-item" data-variant="default">
+            <%= lucide_icon("map-pin-off") %><span>Disable location</span>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%# Fields grid %>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+    <%= render "ui/field", label: t("locations_dashboard.crop", default: "Crop"), value: location.crop&.name || "--" %>
+    <%= render "ui/field", label: t("locations_dashboard.area", default: "Area"), value: location.area ? "#{number_with_precision(location.area, precision: 2)} ha" : "--" %>
+    <%= render "ui/field", label: t("locations_dashboard.supplier", default: "Supplier"), value: location.supplier&.name || "--" %>
+    <% if current_stage %>
+      <%= render("ui/field", label: t("locations_dashboard.stage", default: "Stage")) do %>
+        <%= render "ui/badge", text: current_stage.name, variant: "success", size: "sm" %>
+      <% end %>
+    <% end %>
+    <% if location.latitude.present? %>
+      <%= render "ui/field", label: t("locations_dashboard.coordinates", default: "Coordinates"), value: "#{location.latitude}, #{location.longitude}" %>
+    <% end %>
+    <%= render("ui/field", label: t("locations_dashboard.status", default: "Status")) do %>
+      <%= render "ui/badge", text: location.status? ? t("locations_dashboard.active") : t("locations_dashboard.inactive"), variant: location.status? ? "success" : "disabled", size: "sm" %>
+    <% end %>
+    mmmm
+  </div>
+
+  <%# Climate data %>
+  <% if latest_gcm && latest_gcm.data.present? %>
+    <%= render "ui/data_table",
+      label: t("locations_dashboard.climate_data", default: "Climate data"),
+      headers: [t("locations_dashboard.max_temp", default: "Max. Temp."), t("locations_dashboard.min_temp", default: "Min. temp."), t("locations_dashboard.acc_prec", default: "Acc. Prec.")],
+      rows: [[
+        latest_gcm.data["max_temp"] ? "#{latest_gcm.data['max_temp']}\u00B0C" : "--",
+        latest_gcm.data["min_temp"] ? "#{latest_gcm.data['min_temp']}\u00B0C" : "--",
+        latest_gcm.data["acc_prec"] || "--"
+      ]],
+      columns: 3 %>
+  <% end %>
+
+  <%# Notes section %>
+  <% if recent_notes.any? || show_actions %>
+    <div class="text-sm">
+      <div class="text-muted-foreground mb-2 flex items-center gap-2">
+        <%= lucide_icon("sticky-note", class: "h-4 w-4") %>
+        <%= t("locations_dashboard.recent_notes") %> (<%= location.notes.size %>)
+      </div>
+      <% if recent_notes.any? %>
+        <div class="flex flex-col gap-1">
+          <% recent_notes.each do |note| %>
+            <div class="flex items-center gap-2 text-xs">
+              <%= render "ui/badge", text: note.status? ? t("locations_dashboard.active") : t("locations_dashboard.inactive"), variant: note.status? ? "success" : "disabled", size: "sm" %>
+              <span class="truncate flex-1"><%= note.name %></span>
+              <span class="text-muted-foreground shrink-0"><%= note.created_at.strftime('%d/%m') %></span>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+      <% if show_actions %>
+        <div class="mt-2">
+          <%= render "ui/button", text: t("locations_dashboard.add_note"), variant: "secondary", size: "sm" %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%# Alerts section %>
+  <% if recent_alerts.any? %>
+    <div class="text-sm">
+      <div class="text-muted-foreground mb-2 flex items-center gap-2">
+        <%= lucide_icon("triangle-alert", class: "h-4 w-4") %>
+        <%= t("locations_dashboard.recent_alerts") %> (<%= location.alerts.size %>)
+      </div>
+      <div class="flex flex-col gap-1">
+        <% recent_alerts.each do |alert| %>
+          <div class="flex items-center gap-2 text-xs">
+            <%= render "ui/badge", text: t("admin.alerts.severities.#{alert.severity}"), variant: alert.severity == "high" ? "warning-high" : alert.severity == "medium" ? "warning-medium" : "warning-low", size: "sm" %>
+            <span class="truncate flex-1"><%= alert.text %></span>
+            <span class="text-muted-foreground shrink-0"><%= alert.created_at.strftime('%d/%m') %></span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <%# Footer %>
+  <div class="flex items-center gap-1 text-xs text-muted-foreground">
+    <%= lucide_icon("calendar", class: "h-3 w-3") %>
+    <%= location.created_at.strftime('%d/%m/%Y') %>
+  </div>
+<% end %>

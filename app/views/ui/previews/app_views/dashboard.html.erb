@@ -1,0 +1,65 @@
+<%
+  sidebar_items = [
+    { label: "Dashboard", icon: "house", href: "#", controller: "locations_dashboard" },
+    { label: "Alerts", icon: "triangle-alert", href: "#", controller: "alerts" },
+    { label: "Notes", icon: "notebook-pen", href: "#", controller: "notes" },
+    { label: "Map", icon: "earth", href: "#", controller: "maps" },
+    { label: "Regional Data", icon: "circle-dollar-sign", href: "#", controller: "regional_data" },
+    { label: "Reports", icon: "file-text", href: "#", controller: "reports" },
+    { label: "Score Benchmark", icon: "chart-column", href: "#", controller: "benchmarking" },
+    { label: "Agronomical Advisory", icon: "sheet", href: "#", controller: "agronomical_advisory" },
+    { label: "Irrigation Planner", icon: "droplets", href: "#", controller: "irrigation" },
+    { label: "Portfolio", icon: "briefcase-business", href: "#", controller: "portfolio" },
+    { label: "Backoffice", icon: "building", href: "#", controller: "backoffice" }
+  ]
+  sidebar_footer_items = [
+    { label: "Terms and conditions", icon: "scroll-text", href: "#" },
+    { label: "FAQ", icon: "message-circle-question", href: "#" }
+  ]
+
+  sample_card = {
+    score: "45.20",
+    crop: "Olive",
+    crop_variety: "Picual",
+    expected_volume: "12.4 t",
+    area: "1.80 ha",
+    supplier: "OliveTraders",
+    stage: "Flowering",
+    max_temp: "19.9\u00B0C",
+    min_temp: "7.3\u00B0C",
+    acc_prec: "43.7",
+    alerts: [
+      { text: "Drought risk detected", severity: "high", date: "05/04" },
+      { text: "Low precipitation", severity: "medium", date: "03/04" }
+    ]
+  }
+
+  regions = [
+    { name: "Andalusia", locations: ["Olive Grove North", "Olive Grove South", "Olive Grove East", "Olive Grove West", "Sunset Hills"] },
+    { name: "Catalonia", locations: ["Vineyard Alpha", "Vineyard Beta", "Orchard Gamma"] },
+    { name: "Valencia", locations: ["Citrus Farm 1", "Citrus Farm 2", "Citrus Farm 3", "Almond Field"] }
+  ]
+%>
+
+<%= render "ui/base_layout",
+  title: "Dashboard",
+  icon: "house",
+  active_controller: "locations_dashboard",
+  sidebar_items: sidebar_items,
+  sidebar_footer_items: sidebar_footer_items,
+  user_name: "ivan",
+  user_email: "ivan@arbolitics.com" do %>
+
+  <div class="flex flex-col gap-8">
+    <% regions.each do |region| %>
+      <section class="flex flex-col gap-4">
+        <%= render "ui/heading", text: region[:name], level: 2 %>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          <% region[:locations].each do |location_name| %>
+            <%= render "ui/location_card_lookbook", **sample_card.merge(name: location_name) %>
+          <% end %>
+        </div>
+      </section>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,94 @@
+<%# locals: (name:, crop: "--", crop_variety: "--", expected_volume: "--", area: "--", supplier: "--", score: nil, stage: nil, coordinates: nil, max_temp: nil, min_temp: nil, acc_prec: nil, notes: [], alerts: [], created_at: nil, show_actions: true) %>
+<%= render "ui/card" do %>
+  <%# Header row %>
+  <div class="flex flex-row justify-between items-end gap-2">
+    <div class="flex flex-row gap-2 min-w-0 items-end">
+      <%= render "ui/field", label: "Location name", value: name %>
+      <%= render "ui/icon_button", icon: lucide_icon("arrow-up-right", class: "h-4 w-4"), variant: "outline", size: "sm", shape: "square", href: "#" %>
+    </div>
+    <div class="flex items-end gap-2">
+      <% if score %>
+        <%= render "ui/badge", text: "Score: #{score}", variant: "score", size: "lg" %>
+      <% end %>
+      <%= render "ui/dropdown_menu", side: "bottom", align: "end" do %>
+        <button data-type="icon-button" variant="tinted" size="md" shape="round"
+                type="button" data-dropdown-trigger aria-haspopup="menu" aria-expanded="false">
+          <%= lucide_icon("ellipsis-vertical", class: "h-4 w-4") %>
+        </button>
+
+        <div data-slot="dropdown-menu-content" role="menu" aria-orientation="vertical" data-state="closed">
+          <div role="menuitem" data-slot="dropdown-menu-item" data-variant="default">
+            <%= lucide_icon("pen") %><span>Edit location</span>
+          </div>
+          <div role="menuitem" data-slot="dropdown-menu-item" data-variant="default">
+            <%= lucide_icon("map-pin-off") %><span>Disable location</span>
+          </div>
+        </div>
+      <% end %>
+      </div>
+  </div>
+
+  <%# Fields grid %>
+  <div class="grid grid-cols-3 gap-2">
+    <%= render "ui/field", label: "Crop", value: crop %>
+    <%= render "ui/field", label: "Crop variety", value: crop_variety %>
+    <%= render "ui/field", label: "Expected volume", value: expected_volume %>
+    <% if stage %>
+      <%= render("ui/field", label: "Stage") do %>
+        <%= render "ui/badge", text: stage, variant: "success", size: "sm" %>
+      <% end %>
+    <% else %>
+      <%= render "ui/field", label: "Stage", value: "--" %>
+    <% end %>
+    <%= render "ui/field", label: "Area", value: area %>
+    <%= render "ui/field", label: "Supplier", value: supplier %>
+  </div>
+
+  <%# Notes section %>
+  <% if notes.any? || show_actions %>
+    <div class="text-sm">
+      <div class="mb-2 flex items-center justify-between gap-2">
+        <div class="text-muted-foreground flex items-center gap-2">
+          <%= lucide_icon("sticky-note", class: "h-4 w-4") %>
+          Notes (<%= notes.size %>)
+        </div>
+        <%= render "ui/button", text: "View all", variant: "secondary", size: "sm" %>
+      </div>
+      <% if notes.any? %>
+        <div class="flex flex-col gap-1">
+          <% notes.each do |note| %>
+            <div class="flex items-center gap-2 text-xs">
+              <%= render "ui/badge", text: note[:status] ? "Active" : "Inactive", variant: note[:status] ? "success" : "disabled", size: "sm" %>
+              <span class="truncate flex-1"><%= note[:name] %></span>
+              <span class="text-muted-foreground shrink-0"><%= note[:date] %></span>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%# Alerts section %>
+  <% if alerts.any? %>
+    <% high_alerts_count = alerts.count { |a| a[:severity] == "high" } %>
+    <div class="text-sm">
+      <div class="mb-2 flex items-center justify-between gap-2">
+        <div class="text-muted-foreground flex items-center gap-2">
+          <%= lucide_icon("triangle-alert", class: "h-4 w-4") %>
+          Alerts
+          <%= render "ui/badge", text: high_alerts_count.to_s, variant: "warning-high", size: "sm" %>
+        </div>
+        <%= render "ui/button", text: "View all", variant: "secondary", size: "sm" %>
+      </div>
+    </div>
+  <% end %>
+
+  <%# Climate data %>
+  <% if max_temp && min_temp && acc_prec %>
+    <%= render "ui/data_table",
+      label: "Climate data",
+      headers: ["Max. Temp.", "Min. temp.", "Acc. Prec."],
+      rows: [[max_temp, min_temp, acc_prec]],
+      columns: 3 %>
+  <% end %>
+<% end %>

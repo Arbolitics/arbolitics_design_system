@@ -1,0 +1,61 @@
+<%# locals: (items:, footer_items: [], user_name: nil, user_email: nil, active_controller: nil) %>
+<aside data-type="sidebar" id="app-sidebar" data-collapsed="false">
+  <%# Header: toggle + logo %>
+  <div data-slot="sidebar-header" class="flex flex-row items-center gap-2 px-2 py-3">
+    <button data-type="sidebar-toggle" onclick="toggleSidebar()" aria-label="Toggle sidebar">
+      <%= lucide_icon("menu", class: "size-5") %>
+    </button>
+    <%= image_tag "arbolitics_logo.svg", alt: "arbolitics", data: { slot: "sidebar-logo" } %>
+  </div>
+
+  <%# Main navigation %>
+  <div data-slot="sidebar-content">
+    <ul data-slot="sidebar-menu">
+      <% items.each do |item| %>
+        <%= render "ui/sidebar_menu_item",
+          label: item[:label],
+          icon: item[:icon],
+          href: item[:href],
+          active: item[:active] || (active_controller && item[:controller] == active_controller) %>
+      <% end %>
+    </ul>
+  </div>
+
+  <%# Footer %>
+  <div data-slot="sidebar-footer">
+    <ul data-slot="sidebar-menu" class="list-none border-t border-sidebar-border pt-2">
+      <% footer_items.each do |item| %>
+        <%= render "ui/sidebar_menu_item",
+          label: item[:label],
+          icon: item[:icon],
+          href: item[:href],
+          active: item[:active] || false %>
+      <% end %>
+
+      <% if user_name && user_email %>
+        <li>
+          <button data-type="sidebar-user-button">
+            <span class="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted">
+              <%= lucide_icon("user", class: "size-4") %>
+            </span>
+            <div class="grid flex-1 text-left text-sm leading-tight">
+              <span class="truncate font-medium"><%= user_name %></span>
+              <span class="truncate text-xs text-muted-foreground"><%= user_email %></span>
+            </div>
+            <%= lucide_icon("chevrons-up-down", class: "ml-auto size-4") %>
+          </button>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</aside>
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("app-sidebar");
+    const layout = sidebar.closest("[data-type='sidebar-layout']");
+    const collapsed = sidebar.getAttribute("data-collapsed") === "true";
+    sidebar.setAttribute("data-collapsed", !collapsed);
+    if (layout) layout.setAttribute("data-collapsed", !collapsed);
+  }
+</script>

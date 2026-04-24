@@ -1,0 +1,42 @@
+<% locations = [
+  { name: "Almonds Portugal BM 1", score: "68.59", crop: "Almond", area: "0.53 ha", supplier: "AgriCorp", stage: "Fruit development",
+    coordinates: "-33.4332, -70.6466", max_temp: "19.9°C", min_temp: "7.3°C", acc_prec: "43.7",
+    notes: [{ name: "Inspection complete", status: true, date: "28/03" }],
+    alerts: [{ text: "High temperature warning", severity: "high", date: "02/04" }], created_at: "01/04/2026" },
+  { name: "Olive Grove Andalusia", score: "45.20", crop: "Olive", area: "1.80 ha", supplier: "OliveTraders", stage: "Flowering",
+    notes: [],
+    alerts: [{ text: "Drought risk detected", severity: "high", date: "05/04" }, { text: "Low precipitation", severity: "medium", date: "03/04" }],
+    created_at: "10/02/2026" },
+  { name: "Citrus Farm Valencia 3", crop: "Orange", area: "2.10 ha", supplier: "AgriCorp",
+    notes: [], alerts: [], created_at: "15/01/2026" },
+  { name: "Vineyard Douro Valley", score: "82.10", crop: "Grape", area: "3.40 ha", supplier: "WineEstate", stage: "Veraison",
+    max_temp: "28.1°C", min_temp: "14.5°C", acc_prec: "12.0",
+    notes: [{ name: "Pruning scheduled", status: true, date: "10/04" }, { name: "Soil sample taken", status: true, date: "05/04" }],
+    alerts: [], created_at: "20/03/2026" }
+] %>
+
+<div class="space-y-6">
+  <div>
+    <h1 class="text-2xl font-bold text-foreground mb-1">Dashboard</h1>
+    <p class="text-muted-foreground text-sm">4 locations · AgriCorp</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+    <% locations.each do |loc| %>
+      <%= render "ui/location_card_lookbook",
+        name: loc[:name],
+        score: loc[:score],
+        crop: loc[:crop],
+        area: loc[:area],
+        supplier: loc[:supplier],
+        stage: loc[:stage],
+        coordinates: loc[:coordinates],
+        max_temp: loc[:max_temp],
+        min_temp: loc[:min_temp],
+        acc_prec: loc[:acc_prec],
+        notes: loc[:notes] || [],
+        alerts: loc[:alerts] || [],
+        created_at: loc[:created_at] %>
+    <% end %>
+  </div>
+</div>
