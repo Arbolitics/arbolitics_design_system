@@ -24,27 +24,109 @@
     }
   ]
 %>
-<section id="software" class="section-padding bg-stone-100">
-  <div class="container">
+<section id="insights" class="section-padding bg-stone-100">
+  <div class="px-4">
 
     <div class="mx-auto max-w-3xl text-center mb-16">
       <h2 class="text-3xl font-bold sm:text-4xl mb-4">Insights</h2>
       <p class="text-lg">Explore how we can support your work</p>
     </div>
 
-    <%# Static 3-column grid (replaces the JS carousel) %>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
-      <% insights.each do |insight| %>
-        <%= render "ui/landing_page_components/insight_card", **insight %>
-      <% end %>
-    </div>
+    <div data-component="insights-slider" data-current="1">
+      <div class="py-4" style="overflow-x: clip;">
+        <div data-slot="insights-items" class="gap-4" style="display: flex; flex-wrap: nowrap; transition: transform 300ms ease-in-out; will-change: transform;">
+          <% insights.each do |insight| %>
+            <div data-slot="insights-item" style="min-width: 50%; flex-shrink: 0; opacity: 0.5; transition: opacity 300ms ease-in-out; cursor: pointer;">
+              <%= render "ui/landing_page_components/insight_card", **insight %>
+            </div>
+          <% end %>
+        </div>
+      </div>
 
-    <%# Dot indicators (decorative) %>
-    <div class="mt-4 flex items-center justify-center gap-2">
-      <button class="h-3.5 w-3.5 rounded-full border-2 bg-primary"></button>
-      <button class="h-3.5 w-3.5 rounded-full border-2"></button>
-      <button class="h-3.5 w-3.5 rounded-full border-2"></button>
+      <div data-slot="insights-dots" class="mt-4 flex items-center justify-center gap-2">
+        <% insights.each_with_index do |_, i| %>
+          <button
+            data-slot="insights-dot"
+            data-index="<%= i %>"
+            class="h-3.5 w-3.5 rounded-full border-2 cursor-pointer<%= i == 1 ? ' bg-primary' : '' %>"
+            aria-label="Go to slide <%= i + 1 %>">
+          </button>
+        <% end %>
+      </div>
     </div>
 
   </div>
 </section>
+
+<script>
+  (function () {
+    if (window.__insightsSliderSetup) return;
+    window.__insightsSliderSetup = true;
+
+    function goTo(slider, index, instant) {
+      var items = slider.querySelectorAll('[data-slot="insights-item"]');
+      var track = slider.querySelector('[data-slot="insights-items"]');
+      var container = track.parentElement;
+      var single = container.offsetWidth < 640;
+      var width = single ? '100%' : '50%';
+
+      items.forEach(function (item) { item.style.minWidth = width; });
+      track.offsetHeight; // reflow after width change
+
+      slider.dataset.current = index;
+
+      var containerRect = container.getBoundingClientRect();
+      var itemRect = items[index].getBoundingClientRect();
+      var matrix = new DOMMatrix(getComputedStyle(track).transform);
+      var currentTx = isNaN(matrix.m41) ? 0 : matrix.m41;
+      var delta = (containerRect.left + containerRect.width / 2) -
+                  (itemRect.left + itemRect.width / 2);
+
+      if (instant) track.style.transition = 'none';
+      track.style.transform = 'translateX(' + (currentTx + delta) + 'px)';
+      if (instant) { track.offsetHeight; track.style.transition = 'transform 300ms ease-in-out'; }
+
+      items.forEach(function (item, i) {
+        item.style.opacity = (single || i === index) ? '1' : '0.5';
+      });
+      slider.querySelectorAll('[data-slot="insights-dot"]').forEach(function (dot, i) {
+        dot.classList.toggle('bg-primary', i === index);
+      });
+    }
+
+    function initAll() {
+      document.querySelectorAll('[data-component="insights-slider"]').forEach(function (slider) {
+        var items = slider.querySelectorAll('[data-slot="insights-item"]');
+        goTo(slider, Math.floor(items.length / 2), true);
+      });
+    }
+
+    initAll();
+
+    window.addEventListener('resize', function () {
+      document.querySelectorAll('[data-component="insights-slider"]').forEach(function (slider) {
+        goTo(slider, parseInt(slider.dataset.current, 10), true);
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      var dot = e.target.closest('[data-slot="insights-dot"]');
+      if (dot) {
+        var slider = dot.closest('[data-component="insights-slider"]');
+        goTo(slider, parseInt(dot.dataset.index, 10));
+        return;
+      }
+
+      var item = e.target.closest('[data-slot="insights-item"]');
+      if (item) {
+        var slider = item.closest('[data-component="insights-slider"]');
+        var items = Array.from(slider.querySelectorAll('[data-slot="insights-item"]'));
+        var index = items.indexOf(item);
+        if (index !== parseInt(slider.dataset.current, 10)) {
+          e.preventDefault();
+          goTo(slider, index);
+        }
+      }
+    });
+  })();
+</script>

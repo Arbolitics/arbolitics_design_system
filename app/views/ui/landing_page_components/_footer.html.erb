@@ -1,25 +1,25 @@
 <%# locals: () %>
-<footer class="bg-secondary pt-16 pb-8 border-t">
-  <div class="container">
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-12">
+<footer class="bg-secondary pt-16 pb-8 border-t flex justify-center">
+  <div class="px-4">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mb-12">
 
       <%# Col 1: Logo + social + language %>
       <div class="flex flex-col gap-4">
         <div class="flex items-center">
           <%= image_tag "arbolitics_logo.svg", alt: "arbolitics logo", width: 164, height: 32, class: "size-auto object-center max-w-40" %>
         </div>
-        <div class="flex space-x-4">
+        <div class="flex items-center gap-4">
           <a href="https://www.linkedin.com/company/arbolitics/" target="_blank" class="text-muted-foreground hover:text-primary transition-colors hover:no-underline">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" class="h-6 w-6 text-primary" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
           </a>
-        </div>
-        <button class="inline-flex items-center gap-2 rounded-md text-sm font-medium bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 px-4 py-2 justify-between w-30 shadow-none">
+          <button class="inline-flex items-center gap-2 rounded-md text-sm font-medium bg-secondary text-secondary-foreground hover:bg-secondary/80 h-9 px-4 py-2 justify-between w-30 shadow-none">
           <div class="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe h-4 w-4 opacity-50"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
             <span>English</span>
           </div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down ml-2 h-4 w-4 shrink-0 opacity-50 hidden sm:block"><path d="m6 9 6 6 6-6"></path></svg>
         </button>
+        </div>
       </div>
 
       <%# Col 2: Insights links %>
