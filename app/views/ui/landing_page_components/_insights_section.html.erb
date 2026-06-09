@@ -33,7 +33,7 @@
     </div>
 
     <div data-component="insights-slider" data-current="1">
-      <div class="py-4 px-4 rounded-2xl" style="overflow: hidden; position: relative;">
+      <div class="py-4 rounded-2xl" style="overflow: hidden; position: relative;">
         <div data-slot="insights-items" class="gap-4" style="display: flex; flex-wrap: nowrap; transition: transform 300ms ease-in-out; will-change: transform;">
           <% insights.each do |insight| %>
             <div data-slot="insights-item" style="min-width: 100%; flex-shrink: 0; opacity: 0.5; transition: opacity 300ms ease-in-out; cursor: pointer;">
@@ -67,23 +67,25 @@
       var items = slider.querySelectorAll('[data-slot="insights-item"]');
       var track = slider.querySelector('[data-slot="insights-items"]');
       var container = track.parentElement;
-      var single = container.offsetWidth < 640;
-      var width = single ? '100%' : '50%';
+      var cw = container.clientWidth;
+      var gap = 16; // gap-4 = 1rem = 16px
+      var single = cw < 640;
+      var itemPx = single ? cw : Math.floor(cw / 2);
 
-      items.forEach(function (item) { item.style.minWidth = width; });
-      track.offsetHeight; // reflow after width change
+      // Size items explicitly in pixels so they can never exceed the container
+      items.forEach(function (item) {
+        item.style.width = itemPx + 'px';
+        item.style.minWidth = itemPx + 'px';
+        item.style.maxWidth = itemPx + 'px';
+      });
 
       slider.dataset.current = index;
 
-      var containerRect = container.getBoundingClientRect();
-      var itemRect = items[index].getBoundingClientRect();
-      var matrix = new DOMMatrix(getComputedStyle(track).transform);
-      var currentTx = isNaN(matrix.m41) ? 0 : matrix.m41;
-      var delta = (containerRect.left + containerRect.width / 2) -
-                  (itemRect.left + itemRect.width / 2);
+      // Pure math offset: no getBoundingClientRect dependency
+      var offset = cw / 2 - index * (itemPx + gap) - itemPx / 2;
 
       if (instant) track.style.transition = 'none';
-      track.style.transform = 'translateX(' + (currentTx + delta) + 'px)';
+      track.style.transform = 'translateX(' + offset + 'px)';
       if (instant) { track.offsetHeight; track.style.transition = 'transform 300ms ease-in-out'; }
 
       items.forEach(function (item, i) {
