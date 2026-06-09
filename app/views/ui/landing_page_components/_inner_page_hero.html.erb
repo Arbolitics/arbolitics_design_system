@@ -1,0 +1,37 @@
+<%# locals: (title:, description:, cta_text: "Schedule your demo", cta_url: "#contact", image_src: nil, image_alt: "") %>
+<section class="overflow-hidden">
+  <div class="relative flex items-center" style="min-height: 700px;">
+
+    <%# Background image + overlay %>
+    <div class="absolute inset-0 z-0" style="height: 540px;">
+      <img alt="leaf hero" class="h-full w-full object-cover" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;" src="/leaf.png" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <%# Content %>
+    <div class="container mx-auto px-6 z-10 relative" style="margin-top: 7.5rem;">
+
+      <%# Title + description %>
+      <div class="flex flex-col justify-center space-y-8 mb-8">
+        <h1 class="text-4xl font-bold tracking-tight sm:text-5xl"><%= title %></h1>
+        <p class="text-lg md:text-xl max-w-4xl"><%= description %></p>
+      </div>
+
+      <%# CTA + optional product screenshot %>
+      <div class="grid gap-8 items-start" style="grid-template-columns: 1fr 65%; padding-bottom: 7.5rem;">
+        <div class="flex flex-col">
+          <a href="<%= cta_url %>" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-12 rounded-md px-6 text-base hover:no-underline transition-colors w-fit">
+            <%= cta_text %>
+            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </a>
+        </div>
+        <% if image_src %>
+          <div class="relative hidden lg:block">
+            <img alt="<%= image_alt %>" class="rounded-lg shadow-2xl w-full" src="<%= image_src %>" />
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</section>

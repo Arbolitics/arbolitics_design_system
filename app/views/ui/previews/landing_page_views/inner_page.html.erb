@@ -1,0 +1,47 @@
+<%# Landing page inner page template — e.g. product or feature pages %>
+
+<%= render "ui/landing_page_components/navbar" %>
+
+<main class="flex-1 relative">
+
+  <%= render "ui/landing_page_components/inner_page_hero",
+        title:       "Irrigation planner",
+        description: "Optimize water consumption and maximize crop yields with an irrigation management system that adapts to the actual needs of the field.",
+        cta_text:    "Schedule your demo",
+        cta_url:     "#contact",
+        image_src:   "/irrigation-planner.png",
+        image_alt:   "Irrigation planner app" %>
+
+  <%# Feature content %>
+  <div class="container bg-white text-primary flex flex-col gap-8 my-20 lg:mt-0 lg:mb-40 px-6">
+
+    <div class="space-y-2">
+      <div class="font-bold md:text-xl lg:text-2xl">Automated planning</div>
+      <div class="md:text-lg lg:text-xl">Irrigation plan for the next 7 days updated daily:</div>
+      <ol class="list-disc ml-5">
+        <li class="my-1">Water balance calculations using satellite adjusted crop coefficient (Kc)</li>
+        <li class="my-1">Soil water retention properties</li>
+        <li class="my-1">Irrigation system characteristics</li>
+        <li class="my-1">Automatic irrigation detection with soil sensor data (if available)</li>
+      </ol>
+    </div>
+
+    <div class="space-y-2">
+      <div class="font-bold md:text-xl lg:text-2xl">Email notification</div>
+      <div class="md:text-lg lg:text-xl">with recommendations and continuous monitoring to improve operational efficiency and prevent losses due to inadequate irrigation</div>
+    </div>
+
+    <div class="space-y-2">
+      <div class="font-bold md:text-xl lg:text-2xl">Tailored to your crop needs</div>
+      <div class="md:text-lg lg:text-xl">based on climate, soil, and crop data to apply only the necessary amount of water, reducing water consumption without compromising crop yields.</div>
+    </div>
+
+    <%= render "ui/landing_page_components/partners_marquee" %>
+
+  </div>
+
+  <%= render "ui/landing_page_components/contact_section" %>
+
+</main>
+
+<%= render "ui/landing_page_components/footer" %>

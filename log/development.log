@@ -27035,3 +27035,303 @@ Started GET "/insights/behind-cocoa-price-surge" for 127.0.0.1 at 2026-06-09 17:
   
 ActionController::RoutingError (No route matches [GET] "/insights/behind-cocoa-price-surge"):
   
+Started GET "/lookbook/inspect/landing_page_views/home/default" for 127.0.0.1 at 2026-06-09 17:40:15 -0400
+  
+ArgumentError (Invalid route name, already in use: 'lookbook' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/lookbook/inspect/landing_page_views/home/default" for 127.0.0.1 at 2026-06-09 17:40:17 -0400
+Processing by Lookbook::InspectorController#show as HTML
+  Parameters: {"path"=>"landing_page_views/home/default"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"path"=>"landing_page_views/home/default"}
+  Rendering ui/previews/landing_page_views/home.html.erb
+  Rendered ui/landing_page_components/_navbar.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_hero.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solutions_section.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solutions_section.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_custom_data_section.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insights_section.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_contact_section.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_footer.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered ui/previews/landing_page_views/home.html.erb (Duration: 6.9ms | GC: 0.2ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+  Rendering layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_preview.html.erb (Duration: 3.6ms | GC: 0.1ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_output.html.erb (Duration: 69.5ms | GC: 8.9ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_source.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_notes.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_params.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application (Duration: 112.8ms | GC: 11.2ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/partials/_user_styles.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/skeleton.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/skeleton.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb (Duration: 185.6ms | GC: 20.0ms)
+Completed 200 OK in 204ms (Views: 186.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 22.3ms)
+
+
+Started GET "/lookbook-assets/css/lookbook.css?v=2.3.14" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Started GET "/lookbook-assets/css/themes/indigo.css?v=2.3.14" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Started GET "/lookbook-assets/js/index.js?v=2.3.14" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Started GET "/lookbook-assets/js/lookbook.js?v=2.3.14" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Started GET "/lookbook-assets/img/lucide-sprite.svg" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Started GET "/lookbook/preview/landing_page_views/home/default?_display=%257B%257D&lookbook_timestamp=2026-06-09+17%3A40%3A17+-0400" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Processing by Lookbook::PreviewsController#show as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 17:40:17 -0400", "path"=>"landing_page_views/home/default"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 17:40:17 -0400", "path"=>"landing_page_views/home/default"}
+  Rendering ui/previews/landing_page_views/home.html.erb
+  Rendered ui/landing_page_components/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_hero.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solutions_section.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solutions_section.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_custom_data_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insights_section.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_contact_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_footer.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered ui/previews/landing_page_views/home.html.erb (Duration: 2.7ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Lookbook::PreviewController#render_in_layout_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 17:40:17 -0400", "path"=>"landing_page_views/home/default"}
+  Rendering layout layouts/landings/home/marketing.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/landings/home/marketing
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/landings/home/marketing (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/landings/home/marketing.html.erb (Duration: 4.4ms | GC: 0.1ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb (Duration: 0.3ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/lookbook-assets/Inter-roman.var.b695afbe.woff2" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Started GET "/lookbook-assets/SourceCodeVariable-Roman.ttf.118e9f22.woff2" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Started GET "/lookbook-assets/Inter-italic.var.69eb0fe1.woff2" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Started GET "/leaf.png" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Started GET "/satellite.jpg" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+Started GET "/cocoa.jpg" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/cocoa.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/satellite.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/leaf.png"):
+  
+Started GET "/agriculture.jpg" for 127.0.0.1 at 2026-06-09 17:40:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/agriculture.jpg"):
+  
+Started GET "/lookbook/inspect/landing_page_views/inner_page/default" for 127.0.0.1 at 2026-06-09 17:40:20 -0400
+Processing by Lookbook::InspectorController#show as */*
+  Parameters: {"path"=>"landing_page_views/inner_page/default"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as */*
+  Parameters: {"path"=>"landing_page_views/inner_page/default"}
+  Rendering ui/previews/landing_page_views/inner_page.html.erb
+  Rendered ui/landing_page_components/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_inner_page_hero.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_partners_marquee.html.erb (Duration: 0.4ms | GC: 0.1ms)
+  Rendered ui/landing_page_components/_contact_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/previews/landing_page_views/inner_page.html.erb (Duration: 1.9ms | GC: 0.1ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  Rendering layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_preview.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_output.html.erb (Duration: 34.8ms | GC: 2.5ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_source.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_notes.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_params.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application (Duration: 56.4ms | GC: 2.8ms)
+  Rendered layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb (Duration: 56.6ms | GC: 2.8ms)
+Completed 200 OK in 63ms (Views: 56.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.0ms)
+
+
+Started GET "/lookbook/preview/landing_page_views/inner_page/default?_display=%257B%257D&lookbook_timestamp=2026-06-09+17%3A40%3A20+-0400" for 127.0.0.1 at 2026-06-09 17:40:20 -0400
+Processing by Lookbook::PreviewsController#show as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 17:40:20 -0400", "path"=>"landing_page_views/inner_page/default"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 17:40:20 -0400", "path"=>"landing_page_views/inner_page/default"}
+  Rendering ui/previews/landing_page_views/inner_page.html.erb
+  Rendered ui/landing_page_components/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_inner_page_hero.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_partners_marquee.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_contact_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/previews/landing_page_views/inner_page.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Lookbook::PreviewController#render_in_layout_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 17:40:20 -0400", "path"=>"landing_page_views/inner_page/default"}
+  Rendering layout layouts/landings/home/marketing.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/landings/home/marketing
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/landings/home/marketing (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/landings/home/marketing.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb (Duration: 0.1ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/leaf.png" for 127.0.0.1 at 2026-06-09 17:40:20 -0400
+Started GET "/irrigation-planner.png" for 127.0.0.1 at 2026-06-09 17:40:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/leaf.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/irrigation-planner.png"):
+  
+Started GET "/BMLEH-project.png" for 127.0.0.1 at 2026-06-09 17:40:22 -0400
+Started GET "/agranimo.png" for 127.0.0.1 at 2026-06-09 17:40:22 -0400
+Started GET "/BMLEH-support.png" for 127.0.0.1 at 2026-06-09 17:40:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/BMLEH-project.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/BMLEH-support.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/agranimo.png"):
+  
+Started GET "/raindancer.webp" for 127.0.0.1 at 2026-06-09 17:40:22 -0400
+Started GET "/gwe.png" for 127.0.0.1 at 2026-06-09 17:40:22 -0400
+Started GET "/ostfalia.png" for 127.0.0.1 at 2026-06-09 17:40:22 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/raindancer.webp"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/ostfalia.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/gwe.png"):
+  
+Started GET "/lookbook/preview/landing_page_views/inner_page/default?_display=%257B%257D" for 127.0.0.1 at 2026-06-09 17:40:39 -0400
+Processing by Lookbook::PreviewsController#show as HTML
+  Parameters: {"_display"=>"%7B%7D", "path"=>"landing_page_views/inner_page/default"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "path"=>"landing_page_views/inner_page/default"}
+  Rendering ui/previews/landing_page_views/inner_page.html.erb
+  Rendered ui/landing_page_components/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_inner_page_hero.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_partners_marquee.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_contact_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/previews/landing_page_views/inner_page.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Lookbook::PreviewController#render_in_layout_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "path"=>"landing_page_views/inner_page/default"}
+  Rendering layout layouts/landings/home/marketing.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/landings/home/marketing
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/landings/home/marketing (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/landings/home/marketing.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/leaf.png" for 127.0.0.1 at 2026-06-09 17:40:39 -0400
+Started GET "/irrigation-planner.png" for 127.0.0.1 at 2026-06-09 17:40:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/leaf.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/irrigation-planner.png"):
+  
+Started GET "/ostfalia.png" for 127.0.0.1 at 2026-06-09 17:40:40 -0400
+Started GET "/raindancer.webp" for 127.0.0.1 at 2026-06-09 17:40:40 -0400
+Started GET "/BMLEH-project.png" for 127.0.0.1 at 2026-06-09 17:40:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ostfalia.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/BMLEH-project.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/raindancer.webp"):
+  
+Started GET "/agranimo.png" for 127.0.0.1 at 2026-06-09 17:40:40 -0400
+Started GET "/BMLEH-support.png" for 127.0.0.1 at 2026-06-09 17:40:40 -0400
+Started GET "/gwe.png" for 127.0.0.1 at 2026-06-09 17:40:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/agranimo.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/BMLEH-support.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/gwe.png"):
+  
+Started GET "/agranimo.png" for 127.0.0.1 at 2026-06-09 17:40:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/agranimo.png"):
+  
+Started GET "/raindancer.webp" for 127.0.0.1 at 2026-06-09 17:40:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/raindancer.webp"):
+  
+Started GET "/eu_blue.png" for 127.0.0.1 at 2026-06-09 17:40:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/eu_blue.png"):
+  
+Started GET "/IBB_Logo.svg" for 127.0.0.1 at 2026-06-09 17:40:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/IBB_Logo.svg"):
+  
+Started GET "/gwe.png" for 127.0.0.1 at 2026-06-09 17:40:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/gwe.png"):
+  

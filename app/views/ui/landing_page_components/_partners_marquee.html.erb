@@ -1,0 +1,45 @@
+<%# locals: () %>
+<%
+  cards = [
+    {
+      label:   "Developed in partnership with",
+      content: '<img alt="ostfalia" loading="lazy" class="size-auto object-center max-w-50 mt-12" src="/ostfalia.png" />'
+    },
+    {
+      label:   "Supported by",
+      content: '<div class="flex gap-4 items-center mt-4"><img alt="BMLEH project" loading="lazy" class="size-auto object-center max-w-40" src="/BMLEH-project.png" /><img alt="BMLEH support" loading="lazy" class="size-auto object-center max-w-40" src="/BMLEH-support.png" /></div>'
+    },
+    {
+      label:   "Product partners",
+      content: '<div class="flex gap-4 flex-row items-center mt-4"><img alt="agranimo" loading="lazy" class="size-auto object-center max-w-40" src="/agranimo.png" /><img alt="raindancer" loading="lazy" class="size-auto object-center max-w-40" src="/raindancer.webp" /><img alt="gwe" loading="lazy" class="size-auto object-center max-w-40" src="/gwe.png" /></div>'
+    }
+  ]
+%>
+
+<style>
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(-100% - 1rem)); }
+  }
+  .animate-marquee {
+    animation: marquee-scroll 20s linear infinite;
+  }
+  .marquee-group:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+</style>
+
+<div class="marquee-group flex overflow-hidden p-2 mt-12" style="gap: 1rem;">
+  <% 2.times do %>
+    <div class="animate-marquee flex shrink-0 justify-around" style="gap: 1rem;">
+      <% cards.each do |card| %>
+        <div data-slot="card" class="bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm" style="min-width: 280px;">
+          <div data-slot="card-content" class="px-6">
+            <div class="font-semibold"><%= card[:label] %></div>
+            <%= card[:content].html_safe %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
