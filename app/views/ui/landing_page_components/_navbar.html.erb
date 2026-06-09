@@ -55,3 +55,18 @@
     </div>
   </div>
 </header>
+
+<script>
+  (function () {
+    var header = document.querySelector('header');
+
+    function updateNavbar() {
+      var hero = document.querySelector('main > section');
+      var threshold = hero ? hero.offsetHeight : 560;
+      header.style.backgroundColor = window.scrollY > threshold ? 'white' : '';
+    }
+
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+    updateNavbar();
+  })();
+</script>
