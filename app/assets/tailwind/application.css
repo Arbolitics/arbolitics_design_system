@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "../stylesheets/fonts.css";
 
 /* Landing page utilities */
 .hero-overlay {

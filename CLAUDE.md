@@ -25,12 +25,12 @@ Add to the host app's `application.html.erb` layout, **before** its own
 `stylesheet_link_tag :app`:
 
 ```erb
-<%= stylesheet_link_tag "fonts", "data-turbo-track": "reload" %>
 <%= stylesheet_link_tag "arbolitics_design_system", "data-turbo-track": "reload" %>
 ```
 
-Both files are served automatically from the engine's asset paths — no
-`config.assets.paths` change is needed in the host app.
+This single file includes the Manrope `@font-face` declarations, all theme
+variables, and all component styles. No `config.assets.paths` change is
+needed in the host app.
 
 ---
 
