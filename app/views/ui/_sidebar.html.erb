@@ -1,5 +1,5 @@
 <%# locals: (items:, footer_items: [], user_name: nil, user_email: nil, active_controller: nil) %>
-<aside data-type="sidebar" id="app-sidebar" data-collapsed="false">
+<aside data-type="sidebar" id="app-sidebar" data-collapsed="false" data-open="false">
   <%# Header: toggle + logo %>
   <div data-slot="sidebar-header" class="flex flex-row items-center gap-2 px-2 py-3">
     <button data-type="sidebar-toggle" onclick="toggleSidebar()" aria-label="Toggle sidebar">
@@ -50,12 +50,49 @@
   </div>
 </aside>
 
+<div data-slot="sidebar-backdrop" data-visible="false"></div>
+
 <script>
-  function toggleSidebar() {
-    const sidebar = document.getElementById("app-sidebar");
-    const layout = sidebar.closest("[data-type='sidebar-layout']");
-    const collapsed = sidebar.getAttribute("data-collapsed") === "true";
-    sidebar.setAttribute("data-collapsed", !collapsed);
-    if (layout) layout.setAttribute("data-collapsed", !collapsed);
-  }
+  (function () {
+    if (window.__appSidebarSetup) return;
+    window.__appSidebarSetup = true;
+
+    function getSidebar() { return document.getElementById("app-sidebar"); }
+    function getBackdrop() { return document.querySelector('[data-slot="sidebar-backdrop"]'); }
+    function isMobile() { return window.innerWidth < 768; }
+
+    window.openMobileSidebar = function () {
+      var sidebar = getSidebar();
+      if (!sidebar) return;
+      sidebar.setAttribute("data-open", "true");
+      var backdrop = getBackdrop();
+      if (backdrop) backdrop.setAttribute("data-visible", "true");
+    };
+
+    window.closeMobileSidebar = function () {
+      var sidebar = getSidebar();
+      if (!sidebar) return;
+      sidebar.setAttribute("data-open", "false");
+      var backdrop = getBackdrop();
+      if (backdrop) backdrop.setAttribute("data-visible", "false");
+    };
+
+    window.toggleSidebar = function () {
+      if (isMobile()) {
+        closeMobileSidebar();
+      } else {
+        var sidebar = getSidebar();
+        var layout = sidebar && sidebar.closest("[data-type='sidebar-layout']");
+        var collapsed = sidebar && sidebar.getAttribute("data-collapsed") === "true";
+        if (sidebar) sidebar.setAttribute("data-collapsed", String(!collapsed));
+        if (layout) layout.setAttribute("data-collapsed", String(!collapsed));
+      }
+    };
+
+    document.addEventListener("click", function (e) {
+      if (e.target.closest('[data-slot="sidebar-backdrop"]')) {
+        closeMobileSidebar();
+      }
+    });
+  })();
 </script>

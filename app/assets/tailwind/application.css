@@ -717,6 +717,111 @@ button:has(> svg) {
     @apply md:ml-14;
   }
 
+  /* Mobile sidebar: drawer that slides in from left */
+  @media (max-width: 767px) {
+    [data-type="sidebar"] {
+      transform: translateX(-100%);
+      transition-property: transform;
+      width: 16rem;
+      z-index: 50;
+      pointer-events: none;
+    }
+
+    [data-type="sidebar"][data-open="true"] {
+      transform: translateX(0);
+      pointer-events: auto;
+    }
+
+    [data-type="sidebar-layout"] > main {
+      margin-left: 0;
+    }
+
+    /* Reset ALL collapsed-state visual overrides on mobile so the
+       drawer always renders the full expanded sidebar */
+    [data-type="sidebar"][data-collapsed="true"] {
+      width: 16rem;
+    }
+
+    [data-type="sidebar"][data-collapsed="true"]
+      [data-type="sidebar-menu-button"]
+      span {
+      display: inline;
+    }
+
+    [data-type="sidebar"][data-collapsed="true"]
+      [data-type="sidebar-menu-button"] {
+      justify-content: flex-start;
+      padding: 0.5rem;
+    }
+
+    [data-type="sidebar"][data-collapsed="true"] [data-slot="sidebar-logo"] {
+      display: block;
+    }
+
+    [data-type="sidebar"][data-collapsed="true"]
+      [data-type="sidebar-user-button"] {
+      background-color: var(--color-sidebar-border);
+      padding: 0.5rem;
+      justify-content: flex-start;
+    }
+
+    [data-type="sidebar"][data-collapsed="true"]
+      [data-type="sidebar-user-button"]
+      div {
+      display: grid !important;
+    }
+
+    [data-type="sidebar"][data-collapsed="true"]
+      [data-type="sidebar-user-button"]
+      svg.ml-auto {
+      display: block;
+    }
+
+    [data-type="sidebar"][data-collapsed="true"]
+      [data-type="sidebar-user-button"]
+      > span:first-child {
+      background-color: var(--color-muted);
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  /* Sidebar backdrop — visible on mobile when drawer is open */
+  [data-slot="sidebar-backdrop"] {
+    @apply fixed inset-0 bg-black/50;
+    z-index: 40;
+    display: none;
+  }
+
+  [data-slot="sidebar-backdrop"][data-visible="true"] {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    [data-slot="sidebar-backdrop"] {
+      display: none !important;
+    }
+  }
+
+  /* Mobile trigger button — hidden on desktop, shown only on mobile */
+  [data-type="sidebar-mobile-trigger"] {
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    [data-type="sidebar-mobile-trigger"] {
+      @apply flex items-center justify-center size-10 rounded-md cursor-pointer
+             border-0 bg-transparent text-foreground outline-none
+             hover:bg-sidebar-accent transition-colors;
+    }
+  }
+
+  [data-type="sidebar-mobile-trigger"] svg {
+    @apply size-5 shrink-0;
+    fill: none;
+  }
+
   /* =========================
      DIALOG — shadcn-style overlay + content
   ========================= */

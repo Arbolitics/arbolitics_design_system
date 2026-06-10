@@ -30,6 +30,11 @@ class SidebarPreview < Lookbook::Preview
       user_email: "ivan@arbolitics.com"
   end
 
+  # @label With Layout (mobile)
+  def with_layout
+    render template: "ui/previews/sidebar_layout"
+  end
+
   # @label Menu Item
   # @param active toggle
   def menu_item(active: false)
