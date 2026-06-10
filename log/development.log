@@ -27335,3 +27335,476 @@ Started GET "/gwe.png" for 127.0.0.1 at 2026-06-09 17:40:45 -0400
   
 ActionController::RoutingError (No route matches [GET] "/gwe.png"):
   
+Started GET "/ostfalia.png" for 127.0.0.1 at 2026-06-09 20:01:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ostfalia.png"):
+  
+Started GET "/eu_blue.png" for 127.0.0.1 at 2026-06-09 20:01:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/eu_blue.png"):
+  
+Started GET "/IBB_Logo.svg" for 127.0.0.1 at 2026-06-09 20:01:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/IBB_Logo.svg"):
+  
+Started GET "/lookbook/inspect/landing_page_views/home/default" for 127.0.0.1 at 2026-06-09 20:01:18 -0400
+Processing by Lookbook::InspectorController#show as */*
+  Parameters: {"path"=>"landing_page_views/home/default"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as */*
+  Parameters: {"path"=>"landing_page_views/home/default"}
+  Rendering ui/previews/landing_page_views/home.html.erb
+  Rendered ui/landing_page_components/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_hero.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solutions_section.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solutions_section.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_custom_data_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insights_section.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_contact_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/previews/landing_page_views/home.html.erb (Duration: 2.3ms | GC: 0.7ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+  Rendering layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_preview.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_output.html.erb (Duration: 66.3ms | GC: 8.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_source.html.erb (Duration: 1.4ms | GC: 0.6ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_notes.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_params.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application (Duration: 93.9ms | GC: 10.6ms)
+  Rendered layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb (Duration: 94.1ms | GC: 10.6ms)
+Completed 200 OK in 99ms (Views: 94.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 11.3ms)
+
+
+Started GET "/lookbook/preview/landing_page_views/home/default?_display=%257B%257D&lookbook_timestamp=2026-06-09+20%3A01%3A18+-0400" for 127.0.0.1 at 2026-06-09 20:01:18 -0400
+Processing by Lookbook::PreviewsController#show as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:01:18 -0400", "path"=>"landing_page_views/home/default"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:01:18 -0400", "path"=>"landing_page_views/home/default"}
+  Rendering ui/previews/landing_page_views/home.html.erb
+  Rendered ui/landing_page_components/_navbar.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_hero.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solutions_section.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solution_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_solutions_section.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_custom_data_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insight_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_insights_section.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_contact_section.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/landing_page_components/_footer.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/previews/landing_page_views/home.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Lookbook::PreviewController#render_in_layout_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:01:18 -0400", "path"=>"landing_page_views/home/default"}
+  Rendering layout layouts/landings/home/marketing.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/landings/home/marketing
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/landings/home/marketing (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/landings/home/marketing.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/leaf.png" for 127.0.0.1 at 2026-06-09 20:01:18 -0400
+Started GET "/satellite.jpg" for 127.0.0.1 at 2026-06-09 20:01:18 -0400
+Started GET "/cocoa.jpg" for 127.0.0.1 at 2026-06-09 20:01:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/leaf.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/satellite.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/cocoa.jpg"):
+  
+Started GET "/agriculture.jpg" for 127.0.0.1 at 2026-06-09 20:01:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/agriculture.jpg"):
+  
+Started GET "/eu_blue.png" for 127.0.0.1 at 2026-06-09 20:01:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/eu_blue.png"):
+  
+Started GET "/IBB_Logo.svg" for 127.0.0.1 at 2026-06-09 20:01:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/IBB_Logo.svg"):
+  
+Started GET "/" for 127.0.0.1 at 2026-06-09 20:07:49 -0400
+Redirected to http://localhost:4000/lookbook
+↳ /home/ivan/Documents/code/arbolitics/frontend/arbolitics_design_system_gem/config/routes.rb:13:in `block in <main>'
+Completed 301 Moved Permanently in 0ms
+
+
+Started GET "/lookbook" for 127.0.0.1 at 2026-06-09 20:07:49 -0400
+Processing by Lookbook::ApplicationController#index as HTML
+  Rendering layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/index.html.erb within layouts/lookbook/application
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/partials/_blank_slate.html.erb (Duration: 5.7ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/index.html.erb within layouts/lookbook/application (Duration: 6.5ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/partials/_user_styles.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/skeleton.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/skeleton.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb (Duration: 82.2ms | GC: 9.4ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 9.4ms)
+
+
+Started GET "/lookbook-assets/SourceCodeVariable-Italic.ttf.09b4354a.woff2" for 127.0.0.1 at 2026-06-09 20:07:49 -0400
+Started GET "/lookbook/inspect/badge/warning_high" for 127.0.0.1 at 2026-06-09 20:07:57 -0400
+Processing by Lookbook::InspectorController#show as */*
+  Parameters: {"path"=>"badge/warning_high"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as */*
+  Parameters: {"path"=>"badge/warning_high"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_badge.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_preview.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_output.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_source.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_notes.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/inputs/_select.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_params.html.erb (Duration: 15.3ms | GC: 0.4ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application (Duration: 46.2ms | GC: 2.2ms)
+  Rendered layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb (Duration: 47.8ms | GC: 3.4ms)
+Completed 200 OK in 56ms (Views: 48.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.4ms)
+
+
+Started GET "/lookbook/preview/badge/warning_high?_display=%257B%257D&lookbook_timestamp=2026-06-09+20%3A07%3A57+-0400" for 127.0.0.1 at 2026-06-09 20:07:57 -0400
+Processing by Lookbook::PreviewsController#show as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:07:57 -0400", "path"=>"badge/warning_high"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:07:57 -0400", "path"=>"badge/warning_high"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_badge.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Lookbook::PreviewController#render_in_layout_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:07:57 -0400", "path"=>"badge/warning_high"}
+  Rendering layout layouts/lookbook.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/lookbook.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/lookbook/inspect/badge/warning_low" for 127.0.0.1 at 2026-06-09 20:08:02 -0400
+Processing by Lookbook::InspectorController#show as */*
+  Parameters: {"path"=>"badge/warning_low"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as */*
+  Parameters: {"path"=>"badge/warning_low"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_badge.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  Rendering layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_preview.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_output.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_source.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_notes.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/inputs/_select.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_params.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application (Duration: 26.8ms | GC: 1.0ms)
+  Rendered layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb (Duration: 27.0ms | GC: 1.0ms)
+Completed 200 OK in 32ms (Views: 27.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/lookbook/preview/badge/warning_low?_display=%257B%257D&lookbook_timestamp=2026-06-09+20%3A08%3A02+-0400" for 127.0.0.1 at 2026-06-09 20:08:02 -0400
+Processing by Lookbook::PreviewsController#show as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:02 -0400", "path"=>"badge/warning_low"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:02 -0400", "path"=>"badge/warning_low"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_badge.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Lookbook::PreviewController#render_in_layout_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:02 -0400", "path"=>"badge/warning_low"}
+  Rendering layout layouts/lookbook.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/lookbook.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb (Duration: 0.1ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lookbook/inspect/badge/outline" for 127.0.0.1 at 2026-06-09 20:08:03 -0400
+Processing by Lookbook::InspectorController#show as */*
+  Parameters: {"path"=>"badge/outline"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as */*
+  Parameters: {"path"=>"badge/outline"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_badge.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_preview.html.erb (Duration: 1.4ms | GC: 0.2ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_output.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_source.html.erb (Duration: 1.0ms | GC: 0.3ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_notes.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/inputs/_select.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_params.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application (Duration: 26.0ms | GC: 2.3ms)
+  Rendered layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb (Duration: 26.2ms | GC: 2.3ms)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/lookbook/preview/badge/outline?_display=%257B%257D&lookbook_timestamp=2026-06-09+20%3A08%3A03+-0400" for 127.0.0.1 at 2026-06-09 20:08:03 -0400
+Processing by Lookbook::PreviewsController#show as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:03 -0400", "path"=>"badge/outline"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:03 -0400", "path"=>"badge/outline"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_badge.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Lookbook::PreviewController#render_in_layout_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:03 -0400", "path"=>"badge/outline"}
+  Rendering layout layouts/lookbook.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/lookbook.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/lookbook/inspect/card/default" for 127.0.0.1 at 2026-06-09 20:08:04 -0400
+Processing by Lookbook::InspectorController#show as */*
+  Parameters: {"path"=>"card/default"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as */*
+  Parameters: {"path"=>"card/default"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered ui/_card_default.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_preview.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_output.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_source.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_notes.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_params.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application (Duration: 25.1ms | GC: 1.0ms)
+  Rendered layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb (Duration: 25.3ms | GC: 1.0ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/lookbook/preview/card/default?_display=%257B%257D&lookbook_timestamp=2026-06-09+20%3A08%3A04+-0400" for 127.0.0.1 at 2026-06-09 20:08:04 -0400
+Processing by Lookbook::PreviewsController#show as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:04 -0400", "path"=>"card/default"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:04 -0400", "path"=>"card/default"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered ui/_card_default.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Lookbook::PreviewController#render_in_layout_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:04 -0400", "path"=>"card/default"}
+  Rendering layout layouts/lookbook.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/lookbook.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb (Duration: 0.1ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lookbook/inspect/button/secondary" for 127.0.0.1 at 2026-06-09 20:08:06 -0400
+Processing by Lookbook::InspectorController#show as */*
+  Parameters: {"path"=>"button/secondary"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as */*
+  Parameters: {"path"=>"button/secondary"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_button.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.4ms)
+
+
+  Rendering layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_preview.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_output.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_source.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_notes.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/inputs/_select.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_params.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application (Duration: 31.0ms | GC: 2.4ms)
+  Rendered layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb (Duration: 31.2ms | GC: 2.4ms)
+Completed 200 OK in 39ms (Views: 31.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 5.8ms)
+
+
+Started GET "/lookbook/preview/button/secondary?_display=%257B%257D&lookbook_timestamp=2026-06-09+20%3A08%3A06+-0400" for 127.0.0.1 at 2026-06-09 20:08:06 -0400
+Processing by Lookbook::PreviewsController#show as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:06 -0400", "path"=>"button/secondary"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:06 -0400", "path"=>"button/secondary"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_button.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Lookbook::PreviewController#render_in_layout_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:06 -0400", "path"=>"button/secondary"}
+  Rendering layout layouts/lookbook.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/lookbook.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/lookbook/inspect/checkbox/checked" for 127.0.0.1 at 2026-06-09 20:08:10 -0400
+Processing by Lookbook::InspectorController#show as */*
+  Parameters: {"path"=>"checkbox/checked"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as */*
+  Parameters: {"path"=>"checkbox/checked"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_checkbox.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_preview.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_output.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_source.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_notes.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/inputs/_select.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/panels/_params.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/inspector/show.html.erb within layouts/lookbook/application (Duration: 32.8ms | GC: 1.2ms)
+  Rendered layout /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/layouts/lookbook/application.html.erb (Duration: 33.0ms | GC: 1.2ms)
+Completed 200 OK in 39ms (Views: 33.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.4ms)
+
+
+Started GET "/lookbook/preview/checkbox/checked?_display=%257B%257D&lookbook_timestamp=2026-06-09+20%3A08%3A10+-0400" for 127.0.0.1 at 2026-06-09 20:08:10 -0400
+Processing by Lookbook::PreviewsController#show as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:10 -0400", "path"=>"checkbox/checked"}
+Processing by Lookbook::PreviewController#render_scenario_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:10 -0400", "path"=>"checkbox/checked"}
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb
+  Rendered ui/_checkbox.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/preview.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by Lookbook::PreviewController#render_in_layout_to_string as HTML
+  Parameters: {"_display"=>"%7B%7D", "lookbook_timestamp"=>"2026-06-09 20:08:10 -0400", "path"=>"checkbox/checked"}
+  Rendering layout layouts/lookbook.html.erb
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/group.html.erb within layouts/lookbook (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/lookbook.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendering html template
+  Rendered html template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  Rendering /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb
+  Rendered /home/ivan/.local/share/mise/installs/ruby/3.3.7/lib/ruby/gems/3.3.0/gems/lookbook-2.3.14/app/views/lookbook/previews/show.html.erb (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
