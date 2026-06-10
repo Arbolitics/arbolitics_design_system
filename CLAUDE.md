@@ -19,6 +19,72 @@ bin/rails server          # starts on port 4000
 
 ---
 
+## Using this gem in a host app
+
+Add to the host app's `application.html.erb` layout, **before** its own
+`stylesheet_link_tag :app`:
+
+```erb
+<%= stylesheet_link_tag "fonts", "data-turbo-track": "reload" %>
+<%= stylesheet_link_tag "arbolitics_design_system", "data-turbo-track": "reload" %>
+```
+
+Both files are served automatically from the engine's asset paths — no
+`config.assets.paths` change is needed in the host app.
+
+---
+
+## Design system first
+
+When writing views (in this gem or a host app), **always reach for a DS
+component before writing custom HTML or CSS**. Only fall back to a scoped
+`<style>` block or inline `style=""` for layout that no component covers.
+Never recreate button, input, card, or badge styling from scratch.
+
+---
+
+## UI component quick reference
+
+| Partial | Key locals | Notes |
+|---|---|---|
+| `ui/card` | — (block) | Wraps any content in a bordered card |
+| `ui/heading` | `text:`, `level: 1`, `size: nil` | Renders `h1`–`h6` |
+| `ui/paragraph` | — | Renders a `<p>` |
+| `ui/input` | `type: "text"`, `name: nil`, `placeholder: ""`, `size: "md"`, `disabled: false`, `invalid: false`, `value: nil` | Does **not** integrate with Rails form builder — pass `name:` manually |
+| `ui/button` | `text:`, `variant: "primary"`, `size: "md"`, `disabled: false`, `icon: nil` | Does **not** accept a `type:` local — for submit buttons, use a raw `<button>` tag (see below) |
+| `ui/field` | `label:`, `value: nil` (or block) | Display-only label+value pair, not a form field |
+| `ui/badge` | `text:`, `variant:`, `size:` | |
+| `ui/select` | | |
+| `ui/checkbox` | | |
+
+### Submit buttons in forms
+
+`render "ui/button"` cannot render `type="submit"`. Use the raw tag instead
+— the DS CSS targets `button[variant]` so it is styled identically:
+
+```erb
+<button variant="primary" size="md" type="submit">Sign up</button>
+```
+
+### One-off layout in host app views
+
+Host apps do not have Tailwind compiled, so utility classes added in host
+views will have no effect. Use a scoped `<style>` block with DS CSS
+variables for any layout not covered by a component:
+
+```erb
+<style>
+  body { background-color: var(--color-muted); }
+  .my-wrapper { max-width: 400px; margin: auto; }
+</style>
+```
+
+Available theme variables: `--color-background`, `--color-foreground`,
+`--color-primary`, `--color-muted`, `--color-muted-foreground`,
+`--color-border`, `--color-card`, `--color-destructive`.
+
+---
+
 ## Tailwind CSS — rebuild after adding new classes
 
 | File | Purpose |
