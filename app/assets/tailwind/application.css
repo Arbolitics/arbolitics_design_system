@@ -122,7 +122,7 @@ button:disabled {
 
 /* PRIMARY (default if no variant is set) */
 button[variant="primary"] {
-  @apply bg-primary text-primary-foreground shadow-xs hover:bg-primary/90;
+  @apply bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 border-transparent;
 }
 
 /* SECONDARY */
@@ -140,7 +140,7 @@ button[variant="outline"] {
 
 /* DESTRUCTIVE */
 button[variant="destructive"] {
-  @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
+  @apply bg-destructive text-destructive-foreground hover:bg-destructive/90 border-transparent;
 }
 
 /* button with icon */
@@ -152,13 +152,13 @@ button:has(> svg) {
   /* =========================
          BASE
       ========================= */
-  [variant] {
+  [variant]:not(a):not(p) {
     @apply inline-flex w-fit max-w-full items-center gap-1.5
                border transition-colors
                focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:outline-none;
   }
 
-  [variant] span {
+  [variant]:not(a):not(p) span {
     @apply truncate text-center;
   }
 
@@ -308,32 +308,10 @@ button:has(> svg) {
   }
 
   input[type="checkbox"] {
-    @apply appearance-none shrink-0 border border-input
-         bg-background shadow-xs
-         transition-[color,box-shadow]
-         outline-none cursor-pointer;
-
-    /* checked state */
-    @apply checked:bg-primary checked:border-primary;
-
-    /* check icon (using background) */
-    background-image: none;
+    accent-color: var(--color-primary);
+    @apply cursor-pointer;
   }
 
-  /* checkmark */
-  input[type="checkbox"]:checked {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5.5 5.5a1 1 0 01-1.414 0l-2.5-2.5a1 1 0 011.414-1.414L6 9.586l4.793-4.793a1 1 0 011.414 0z'/%3e%3c/svg%3e");
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  /* focus */
-  input[type="checkbox"] {
-    @apply focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:border-ring;
-  }
-
-  /* disabled */
   input[type="checkbox"]:disabled,
   input[type="checkbox"][variant="disabled"] {
     @apply pointer-events-none opacity-50 cursor-not-allowed;
@@ -344,26 +322,10 @@ button:has(> svg) {
 ========================= */
 
   input[type="radio"] {
-    @apply appearance-none shrink-0 rounded-full border border-input
-         bg-background shadow-xs
-         transition-[color,box-shadow]
-         outline-none cursor-pointer;
-
-    /* checked state */
-    @apply checked:border-primary checked:bg-primary;
+    accent-color: var(--color-primary);
+    @apply cursor-pointer;
   }
 
-  /* inner dot */
-  input[type="radio"]:checked {
-    background-image: radial-gradient(white 40%, transparent 41%);
-  }
-
-  /* focus */
-  input[type="radio"] {
-    @apply focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:border-ring;
-  }
-
-  /* disabled */
   input[type="radio"]:disabled,
   input[type="radio"][variant="disabled"] {
     @apply pointer-events-none opacity-50 cursor-not-allowed;

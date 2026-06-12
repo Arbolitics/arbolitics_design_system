@@ -1,2 +1,2 @@
 <%# locals: (text:, href: "#", variant: nil, size: nil) %>
-<a href="<%= href %>" <%= %(variant="#{variant}") if variant %> <%= %(size="#{size}") if size %>><%= text %></a>
+<a href="<%= href %>"<% if variant %> variant="<%= variant %>"<% end %><% if size %> size="<%= size %>"<% end %>><%= text %></a>

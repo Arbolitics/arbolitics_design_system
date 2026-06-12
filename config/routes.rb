@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   # Only draw standalone app routes when running outside a host app
   if Rails.application.class.module_parent == ArboliticsDesignSystem
-    get "up" => "rails/health#show", as: :rails_health_check
+    get "up"       => "rails/health#show", as: :rails_health_check
+    get "showcase" => "showcase#index"
     root to: redirect("/lookbook")
   end
 end
